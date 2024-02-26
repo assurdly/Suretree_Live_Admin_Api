@@ -1,0 +1,15 @@
+{
+  "queryString": "",
+  "providerName": [],
+  "productName": [],
+  "categoryName": [
+    "Personal Savings Account"
+  ],
+  "providerNo": [],
+  "providerPhone": [],
+  "providerDescription": [],
+  "providerEmail": [],
+  "dateCreated": "2023-11-24",
+  "rowsPerPage": 20,
+  "pageNumber": 1
+}
