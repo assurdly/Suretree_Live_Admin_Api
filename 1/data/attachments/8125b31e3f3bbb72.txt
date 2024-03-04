@@ -1,0 +1,18 @@
+{
+    "queryString":"",
+    "organizationAccountDetailId":[],
+    "providerID":[],
+    "providerName":[],
+    "accountName":[],
+    "accountNumber":[],
+    "approvalStatus":[],
+    "bankName":["First City Monument Bank Plc"],
+    "isDefault":null, 
+    "isDisplayedOnInvoice": null,
+    "isApproved": null,
+    "dateCreated":null,
+    "rowsPerPage":7,
+    "pageNumber":1,
+    "sortType":"DESC",
+    "sortBy":"DateCreated"
+}
