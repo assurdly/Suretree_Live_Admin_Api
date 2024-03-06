@@ -1,0 +1,19 @@
+{
+  "productType": [],
+  "applicationID": [],
+  "providerName": [],
+  "productname": [],
+  "firstName": [],
+  "lastName": [],
+  "status": ["Pending"],
+  "duration": [],
+  "DataSource":["Loan Applications"],
+  "rowsPerPageParam": 10,
+  "customerId": "",
+  "pageNumberParam": 1,
+  "dateOfApplication": "",
+  "startDate": "",
+  "endDate": "",
+  "minAmount":0,
+  "maxAmount": 100000000
+}
