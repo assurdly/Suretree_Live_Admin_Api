@@ -1,0 +1,11 @@
+
+
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+var Response = pm.response.json();
+
+pm.test("CustomerApplicationId is returned and not null", function () {
+    pm.expect(Response.List[0].CustomerApplicationId).is.not.null;
+});
