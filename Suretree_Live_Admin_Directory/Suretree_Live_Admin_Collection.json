@@ -2308,6 +2308,74 @@
 					"response": []
 				},
 				{
+					"name": "single endpoint for application listing pages of Savings, Loan and FD Applications",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6c7c6a91-59e9-4620-8d30-14fe9ede5539",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name has string\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"pm.test(\"Your test message\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.message).to.eql(\"Success\");\r",
+									"});\r",
+									"pm.test(\"Your test isSuccess\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.isSuccess).to.eql(true);\r",
+									"});\r",
+									"pm.test(\"Your test successMessage\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.data.successMessage).to.eql(\"Records retrieved successfully\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Your test errorMessage\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.data.errorMessage).to.eql(null);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Your test responseCode\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.data.responseCode).to.eql(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "b49bf341-82b0-410f-9662-1d3c678a3333",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{admin_Auth_token_Live}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"productType\": [],\n  \"applicationID\": [],\n  \"providerName\": [],\n  \"productname\": [],\n  \"firstName\": [],\n  \"lastName\": [],\n  \"status\": [\"Pending\",\"Cancelled\",\"Savings Pending\"],\n  \"duration\": [\"3\",\"6\",\"7\"],\n  \"DataSource\":[\"Loan Applications\",\"Customer Savings\",\"Common Applications\"],\n  \"rowsPerPageParam\": 10,\n  \"customerId\": \"\",\n  \"pageNumberParam\": 1,\n  \"dateOfApplication\": \"\",\n  \"startDate\": \"\",\n  \"endDate\": \"\",\n  \"minAmount\":0,\n  \"maxAmount\": 100000000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/api/v2/Application/list-allcustomer-applications"
+					},
+					"response": []
+				},
+				{
 					"name": "Get-customer-application-details",
 					"event": [
 						{
@@ -5219,7 +5287,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "39a17787-5db5-44d7-8a73-017074ee5a29",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
@@ -5238,7 +5308,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/api/v2/loans/get-download-document-url-link?ApplicationId=927929ec-2efe-4110-9ce7-802368c77257",
+							"raw": "{{baseUrl}}/api/v2/loans/get-download-document-url-link?ApplicationId=ea802d7e-2d11-475d-97fd-aef6f3ecdfda",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -5251,7 +5321,7 @@
 							"query": [
 								{
 									"key": "ApplicationId",
-									"value": "927929ec-2efe-4110-9ce7-802368c77257"
+									"value": "ea802d7e-2d11-475d-97fd-aef6f3ecdfda"
 								}
 							]
 						}
