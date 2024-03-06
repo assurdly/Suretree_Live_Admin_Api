@@ -1,0 +1,13 @@
+var resp = JSON.parse(responseBody)
+
+pm.test("Status code is 400", function () {
+    pm.response.to.have.status(400);
+});
+
+pm.test("An error message about an invalid Loan Product ID is returned", function () {
+    pm.expect(resp.data).to.eql("Invalid ProductID");
+});
+
+pm.test("A failed message is returned", function () {
+    pm.expect(resp.message).to.eql("Failed");
+});
