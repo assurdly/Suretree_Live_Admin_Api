@@ -1,0 +1,9 @@
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+
+pm.test('Response contains a PDF content type', function() {
+  pm.response.to.have.header('content-type');
+  pm.expect(pm.response.headers.get('Content-Type')).match(/^application\/pdf/i);
+});

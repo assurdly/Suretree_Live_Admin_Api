@@ -1,0 +1,18 @@
+{
+    "queryString":"Realty Invest Network Solution",
+    "organizationAccountDetailId":["c82225ac-3f38-4a23-97f8-40f04c80db6d"],
+    "providerID":[],
+    "providerName":[],
+    "accountName":[],
+    "accountNumber":[],
+    "approvalStatus":[],
+    "bankName":[],
+    "isDefault":null, 
+    "isDisplayedOnInvoice": null,
+    "isApproved": null,
+    "dateCreated":null,
+    "rowsPerPage":7,
+    "pageNumber":1,
+    "sortType":"DESC",
+    "sortBy":"DateCreated"
+}
