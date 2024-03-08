@@ -1,0 +1,4 @@
+{
+    "SponsoredProductId" : "30c22e14-ed87-4441-b31a-0a70e075e7ea",
+    "ExpireInDays": 35
+}
