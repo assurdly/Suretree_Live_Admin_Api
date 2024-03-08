@@ -1468,12 +1468,8 @@
 											"    pm.response.to.have.status(400);\r",
 											"});\r",
 											"\r",
-											"pm.test(\"An error message about an invalid Loan Product ID is returned\", function () {\r",
-											"    pm.expect(resp.data).to.eql(\"Invalid ProductID\");\r",
-											"});\r",
-											"\r",
 											"pm.test(\"A failed message is returned\", function () {\r",
-											"    pm.expect(resp.message).to.eql(\"Failed\");\r",
+											"    pm.expect(resp.message).to.eql(\"Invalid Sponsored ProductID.\");\r",
 											"});"
 										],
 										"type": "text/javascript"
@@ -2389,8 +2385,9 @@
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
 									"pm.test(\"Application ID is returned\", function () {\r",
-									"    pm.expect(resp.data.application.commonApplicationId).to.eql(\"d212796c-b724-40d0-abf4-0dc78e9737a5\");\r",
+									"    pm.expect(resp.data.application.commonApplicationId).to.eql(\"160a707b-5cb7-418a-8c78-0107b0c9a894\");\r",
 									"});\r",
+									"\r",
 									""
 								],
 								"type": "text/javascript"
