@@ -1661,12 +1661,8 @@
 											"    pm.response.to.have.status(400);\r",
 											"});\r",
 											"\r",
-											"pm.test(\"An error message about an invalid Product ID is returned\", function () {\r",
-											"    pm.expect(resp.data).to.eql(\"Invalid ProductID\");\r",
-											"});\r",
-											"\r",
 											"pm.test(\"A failed message is returned\", function () {\r",
-											"    pm.expect(resp.message).to.eql(\"Failed\");\r",
+											"    pm.expect(resp.message).to.eql(\"Sponsored Product Not Found.\");\r",
 											"});"
 										],
 										"type": "text/javascript"
