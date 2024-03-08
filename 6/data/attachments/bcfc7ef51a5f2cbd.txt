@@ -1,0 +1,4 @@
+{
+    "SponsoredProductId" : "a5bd7fed-5d7d-4f7c-be10-9c8c44d414bb",
+    "SponsoredProductEnabled": true
+}
