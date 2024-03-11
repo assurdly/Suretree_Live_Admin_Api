@@ -1,0 +1,9 @@
+var resp = JSON.parse(responseBody)
+
+pm.test("Status code is 400", function () {
+    pm.response.to.have.status(400);
+});
+
+pm.test("A failed message is returned", function () {
+    pm.expect(resp.message).to.eql("Invalid Sponsored ProductID.");
+});
