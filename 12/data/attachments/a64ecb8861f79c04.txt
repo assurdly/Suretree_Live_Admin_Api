@@ -1,0 +1,10 @@
+{
+  "queryString": "",
+  "rowsPerPage": 1,
+  "pageNumber":1,
+  "total": 0,
+  "totalPages": 0,
+  "searchText": "Slack System",
+  "sortBy": "DESC",
+  "orderIn": ""
+}

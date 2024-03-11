@@ -1,0 +1,75 @@
+pm.test("Status code name has string", function () {
+    pm.response.to.have.status(200);
+});
+pm.test("Status code name Have records", function () {
+    pm.expect(pm.response.text()).to.include("records");
+});
+pm.test("Status code name Have providerId", function () {
+    pm.expect(pm.response.text()).to.include("providerId");
+});
+pm.test("Status code name Have providerNo", function () {
+    pm.expect(pm.response.text()).to.include("providerNo");
+})
+pm.test("Status code name Have providerName", function () {
+    pm.expect(pm.response.text()).to.include("providerName");
+})
+pm.test("Status code name Have string", function () {
+    pm.expect(pm.response.text()).to.include("providerDescription");
+});
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("providerEmail");
+})
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("providerAddress");
+})
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("providerPhone");
+})
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("providerWebsite");
+})
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("dateCreated");
+})
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("productCount");
+})
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("providerName");
+})
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("productCategoryID");
+})
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("categoryID");
+})
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("categoryName");
+})
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("parentCategoryID");
+})
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("providerWebsite");
+})
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("fileSystemId");
+})
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("categoryUrlSlug");
+})
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("invoicingFrequency");
+})
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("totalRecordsCount");
+})
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("currentPage");
+})
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("pageSize");
+})
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("totalPages");
+})

@@ -1,0 +1,17 @@
+var resp = JSON.parse(responseBody)
+
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("ProductID is returned", function () {
+    pm.expect(resp.data.productId).to.eql("6be44d83-d1a7-44ee-b138-8e876ea80424");
+});
+
+pm.test("CategoryID is returned", function () {
+    pm.expect(resp.data.categoryID).to.eql("4d6e702c-7654-4e9a-b8b9-2b44cabf6476");
+});
+
+pm.test("Product type is a loan", function () {
+    pm.expect(resp.data.campaignName).to.eql("Regular Savings");
+});
