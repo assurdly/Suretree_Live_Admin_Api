@@ -1,0 +1,17 @@
+var resp = JSON.parse(responseBody)
+
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("ProductID is returned", function () {
+    pm.expect(resp.data.productId).to.eql("c9eac3e7-71ec-4780-88ca-d90a6964b408");
+});
+
+pm.test("CategoryID is returned", function () {
+    pm.expect(resp.data.categoryID).to.eql("746cb516-69e8-4c30-9912-694674241d4f");
+});
+
+pm.test("Product type is a loan", function () {
+    pm.expect(resp.data.campaignName).to.eql("Letshego Health Loan");
+});
