@@ -5703,7 +5703,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"queryString\": \"Realty\",\n  \"rowsPerPage\": 20,\n  \"pageNumber\":1,\n  \"total\": 0,\n  \"totalPages\": 10,\n  \"searchText\": \"\",\n  \"sortBy\": \"DESC\",\n  \"orderIn\": \"\"\n}",
+							"raw": "{\n  \"queryString\": \"\",\n  \"rowsPerPage\": 1,\n  \"pageNumber\":1,\n  \"total\": 0,\n  \"totalPages\": 0,\n  \"searchText\": \"Slack System\",\n  \"sortBy\": \"DESC\",\n  \"orderIn\": \"\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5737,17 +5737,21 @@
 									"});",
 									"pm.test(\"Your test successMessage\", function () {",
 									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.SuccessMessage).to.eql(\"Successful\");",
+									"    pm.expect(jsonData.successMessage).to.eql(\"Data retrive successfully\");",
 									"});",
 									"",
 									"pm.test(\"Your test errorMessage\", function () {",
 									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.ErrorMessage).to.eql(null);",
+									"    pm.expect(jsonData.errorMessage).to.eql(null);",
 									"});",
 									"",
 									"pm.test(\"Your test responseCode\", function () {",
 									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.ResponseCode).to.eql(200);",
+									"    pm.expect(jsonData.responseCode).to.eql(200);",
+									"});",
+									"pm.test(\"details is not empty\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.details).to.not.be.empty;",
 									"});"
 								],
 								"type": "text/javascript"
@@ -5756,7 +5760,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "59a4ccd8-6346-4226-9f9e-2881e0c0a3d4",
+								"id": "23eb1c3a-b1cd-4625-a4f9-c67873faea99",
 								"exec": [],
 								"type": "text/javascript"
 							}
