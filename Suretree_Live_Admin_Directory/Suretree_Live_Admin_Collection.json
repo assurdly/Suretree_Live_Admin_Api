@@ -5703,7 +5703,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"queryString\": \"Realty Share\",\n  \"rowsPerPage\": 1,\n  \"pageNumber\":1,\n  \"total\": 0,\n  \"totalPages\": 0,\n  \"searchText\": \"\",\n  \"sortBy\": \"DESC\",\n  \"orderIn\": \"\"\n}",
+							"raw": "{\n  \"queryString\": \"Realty\",\n  \"rowsPerPage\": 20,\n  \"pageNumber\":1,\n  \"total\": 0,\n  \"totalPages\": 10,\n  \"searchText\": \"\",\n  \"sortBy\": \"DateCreate\",\n  \"orderIn\": \"DESC\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
