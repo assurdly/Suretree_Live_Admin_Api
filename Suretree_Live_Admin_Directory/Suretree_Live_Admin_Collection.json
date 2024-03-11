@@ -5735,7 +5735,7 @@
 						},
 						"method": "GET",
 						"header": [],
-						"url": "{{baseUrl}}/api/products/GetSavingProductData/d29c0b37-ceac-4839-8bd0-c73561297eac"
+						"url": "{{baseUrl}}/api/products/GetSavingProductData/32FA86D7-E196-466D-BCA5-6948B16ACCFB"
 					},
 					"response": []
 				}
