@@ -5688,6 +5688,49 @@
 			"item": [
 				{
 					"name": "Search Savings Products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e73932a5-29e1-4b93-8d91-b52af30bb072",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Status code name has string\", function () {",
+									"    pm.response.to.have.status(\"OK\");",
+									"});",
+									"pm.test(\"Your test successMessage\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.successMessage).to.eql(null);",
+									"});",
+									"",
+									"pm.test(\"Your test errorMessage\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.errorMessage).to.eql(null);",
+									"});",
+									"pm.test(\"Your test responseCode\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.responseCode).to.eql(200);",
+									"});",
+									"pm.test(\"details is not empty\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.details).to.not.be.empty;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c5da36de-9a3c-47b4-85c9-3d18fd06764a",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "dbcfb1fb-4870-40ef-a47d-d765d68dc3a5",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -5791,6 +5834,49 @@
 			"item": [
 				{
 					"name": "Save Savings Product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "02b6623f-8da3-4961-90f4-bdf86c34ea81",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Status code name has string\", function () {",
+									"    pm.response.to.have.status(\"OK\");",
+									"});",
+									"pm.test(\"Your test successMessage\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.successMessage).to.eql(null);",
+									"});",
+									"",
+									"pm.test(\"Your test errorMessage\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.errorMessage).to.eql(null);",
+									"});",
+									"pm.test(\"Your test responseCode\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.responseCode).to.eql(200);",
+									"});",
+									"pm.test(\"details is not empty\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.details).to.not.be.empty;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "b1bf91ba-9fd1-429c-9943-522f3240d08c",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "ab113d2b-224b-4e79-a140-8bbb4bea9e3a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
