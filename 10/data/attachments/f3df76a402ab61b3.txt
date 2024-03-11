@@ -1,0 +1,9 @@
+var resp = JSON.parse(responseBody)
+
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Savings product Name is returned", function () {
+    pm.expect(resp.details.productName).to.eql("Standard Savings Account");
+});

@@ -1,0 +1,10 @@
+{
+  "queryString": "",
+  "rowsPerPage": 20,
+  "pageNumber":1,
+  "total": 0,
+  "totalPages": 10,
+  "searchText": "Realty",
+  "sortBy": "",
+  "orderIn": ""
+}

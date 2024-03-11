@@ -1,0 +1,25 @@
+{
+    "queryString": "",
+    "rowsPerPage": 20,
+    "pageNumber": 1,
+    "total": 0,
+    "totalPages": 0,
+    "categoryName": [
+        "Personal Savings Account",
+        "Children's Savings Account",
+        "Fixed Deposit Account"
+    ],
+    "productName": [],
+    "providerName": [],
+    "providerNo": [],
+    "applicationType": [],
+    "productDescription": [],
+    "providerID": [],
+    "productDateCreated": "",
+    "providerPhone": [],
+    "providerDescription": [],
+    "providerEmail": [],
+    "dateCreated": "2023-11-24",
+    "sortBy": "",
+    "sortType": ""
+}

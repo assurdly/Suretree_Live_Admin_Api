@@ -1,0 +1,14 @@
+var resp = JSON.parse(responseBody)
+
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("ProductID is returned", function () {
+    pm.expect(resp.Details.ProductRequirements[0].ProductId).to.eql("a5bd7fed-5d7d-4f7c-be10-9c8c44d414ce");
+});
+
+
+pm.test("Product is a Loan product", function () {
+    pm.expect(resp.Details.ProductRequirements[0].ProductName).to.eql("Kobogo Instant Loan");
+});
