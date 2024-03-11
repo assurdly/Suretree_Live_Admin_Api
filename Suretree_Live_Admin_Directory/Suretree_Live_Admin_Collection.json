@@ -5703,7 +5703,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"queryString\": \"\",\n  \"rowsPerPage\": 20,\n  \"pageNumber\":1,\n  \"total\": 0,\n  \"totalPages\": 10,\n  \"searchText\": \"Realty\",\n  \"sortBy\": \"\",\n  \"orderIn\": \"\"\n}",
+							"raw": "{\n  \"queryString\": \"Realty\",\n  \"rowsPerPage\": 20,\n  \"pageNumber\":1,\n  \"total\": 0,\n  \"totalPages\": 10,\n  \"searchText\": \"\",\n  \"sortBy\": \"DESC\",\n  \"orderIn\": \"\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5722,6 +5722,46 @@
 			"item": [
 				{
 					"name": "Get Saving Product Data via Product ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1cad6572-5ce4-4733-9eea-f772bf28e8a8",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Status code name has string\", function () {",
+									"    pm.response.to.have.status(\"OK\");",
+									"});",
+									"pm.test(\"Your test successMessage\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.SuccessMessage).to.eql(\"Successful\");",
+									"});",
+									"",
+									"pm.test(\"Your test errorMessage\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.ErrorMessage).to.eql(null);",
+									"});",
+									"",
+									"pm.test(\"Your test responseCode\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.ResponseCode).to.eql(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "59a4ccd8-6346-4226-9f9e-2881e0c0a3d4",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "55527ad3-34bb-4701-8de6-0e023ea3cba5",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
