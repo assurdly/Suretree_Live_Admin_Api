@@ -1,0 +1,1 @@
+{"successMessage":null,"errorMessage":null,"responseCode":200,"total":0,"totalPages":1,"rowsPerPage":20,"pageItemsCount":0,"pageNumber":1,"queryString":"","list":null,"details":[]}
