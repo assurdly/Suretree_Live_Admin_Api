@@ -1,0 +1,6 @@
+{
+   "ExpireInDays": 10,
+   "ProductId" : "4fd54f40-c8a2-44ab-85f8-2a6968024234",
+   "CategoryID": "2fde931f-bfcd-4427-9fed-ad843270f1d2",
+   "campaignName": "Test"
+}
