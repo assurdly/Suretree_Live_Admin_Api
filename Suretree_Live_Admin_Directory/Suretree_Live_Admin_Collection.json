@@ -5627,7 +5627,27 @@
 							"script": {
 								"id": "d822b22e-a681-4762-a420-840ab7106a7b",
 								"exec": [
-									""
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Status code name has string\", function () {",
+									"    pm.response.to.have.status(\"OK\");",
+									"});",
+									"pm.test(\"Your test successMessage\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.SuccessMessage).to.eql(\"Successful\");",
+									"});",
+									"",
+									"pm.test(\"Your test errorMessage\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.ErrorMessage).to.eql(null);",
+									"});",
+									"",
+									"pm.test(\"Your test responseCode\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.ResponseCode).to.eql(200);",
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -5636,7 +5656,9 @@
 							"listen": "prerequest",
 							"script": {
 								"id": "2614272d-cf2f-46d3-87a2-77cd113a0b9b",
-								"exec": [],
+								"exec": [
+									""
+								],
 								"type": "text/javascript"
 							}
 						}
@@ -5649,7 +5671,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{admin_Auth_token}}"
+								"token": "{{admin_Auth_token_Live}}"
 							}
 						},
 						"method": "GET",
@@ -5674,14 +5696,14 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{admin_Auth_token}}"
+								"token": "{{admin_Auth_token_Live}}"
 							}
 						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"queryString\": \"Slack\",\n  \"rowsPerPage\": 20,\n  \"pageNumber\":1,\n  \"total\": 0,\n  \"totalPages\": 10,\n  \"searchText\": \"\",\n  \"sortBy\": \"\",\n  \"orderIn\": \"\"\n}",
+							"raw": "{\n  \"queryString\": \"\",\n  \"rowsPerPage\": 20,\n  \"pageNumber\":1,\n  \"total\": 0,\n  \"totalPages\": 10,\n  \"searchText\": \"Realty\",\n  \"sortBy\": \"\",\n  \"orderIn\": \"\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5708,7 +5730,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{admin_Auth_token}}"
+								"token": "{{admin_Auth_token_Live}}"
 							}
 						},
 						"method": "GET",
