@@ -1,0 +1,25 @@
+{
+  "queryString": "",
+  "rowsPerPage": 20,
+  "pageNumber": 1,
+  "total": 0,
+  "totalPages": 0,
+  "categoryName": [
+    "Consumer Loans",
+    "Quick Loans",
+    "Payday Loans"
+  ],
+  "productName": [],
+  "providerName": [],
+  "providerNo": [],
+  "applicationType": [],
+  "productDescription": [],
+  "providerID": [],
+  "productDateCreated": "",
+  "providerPhone": [],
+  "providerDescription": [],
+  "providerEmail": [],
+  "dateCreated": "2023-10-30",
+  "sortBy": "",
+  "sortType": ""
+}

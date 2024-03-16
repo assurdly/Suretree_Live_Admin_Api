@@ -1,0 +1,20 @@
+{
+    "productType":
+        ["Savings","Fixed Deposit"],
+        "categoryName":[],
+        "providerName":[],
+        "productName":[],
+        "status":[],
+        "duration":[],
+        "startDate":"",
+        "endDate":"",
+        "minAmount":400,
+        "maxAmount":500,
+        "CategoryUrlSlug":[],
+        "PageNumberParam":1,
+        "queryString":"",
+        "rowsPerPageParam":15,
+        "sortDirection":"",
+        "sortBy":"",
+        "IncludeAwaitingDirectorApproval":true
+        }
